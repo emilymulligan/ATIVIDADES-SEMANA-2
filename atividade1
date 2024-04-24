@@ -1,0 +1,7 @@
+c = int(input('Digite o valor para converter para Fahrenheit:'))
+f = (1.8*c+32)
+print('O valor celsius em Fahrenheit é:',f)
+
+f = float(input('Digite o valor para converter para celsius:'))
+c = ((f-32)/1.8)
+print('O valor Fahrenheit em celsius é:',c)
