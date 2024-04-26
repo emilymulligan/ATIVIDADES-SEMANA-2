@@ -1,0 +1,21 @@
+nota1 = float(input('Digite a nota do primeiro bimestre: '))
+nota2 = float(input('Digite a nota do segundo bimestre: '))
+nota3 = float(input('Digite a nota do terceiro bimestre: '))
+nota4 = float(input('Digite a nota do quarto bimestre: '))
+n_aulas = int(input('Digite o número de aulas: '))
+n_faltas = int(input('Digite o número de faltas: '))
+
+nota_final = (nota1 + nota2 + nota3 + nota4) / 4
+n_aulas_frequentadas = n_aulas - n_faltas
+frequencia = (n_aulas_frequentadas / n_aulas) * 100
+
+
+
+if frequencia < 75 and nota_final < 7:
+    print('Reprovado por Faltas e Média. Sua média final foi:', nota_final, 'E sua frequência foi:', frequencia)
+elif nota_final >= 7:
+    print('Aprovado! Sua média final foi:', nota_final)
+elif frequencia > 75 and 5 <= nota_final < 7:
+    print('Recuperação. Sua média final foi:', nota_final, 'E sua frequência foi:', frequencia)
+else:
+    print('Reprovado por Média. Sua média final foi:', nota_final)
